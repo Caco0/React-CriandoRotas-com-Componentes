@@ -1,9 +1,9 @@
-import viteLogo from '../../../public/vite.svg';
-import reactLogo from '../../assets/react.svg';
 import { Posts } from '../../components/Posts';
 import { CounterProvider } from '../../contexts/CounterProvider';
 import { PostsProvider } from '../../contexts/PostsProvider';
 import './App.css';
+import reactLogo from './svg/react.svg';
+import viteLogo from './svg/vite.svg';
 
 export function App() {
   return (

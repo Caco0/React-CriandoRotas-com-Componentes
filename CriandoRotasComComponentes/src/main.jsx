@@ -11,8 +11,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Menu />
       <Switch>
+        <Route path="/abc/:slug?/:id?" component={Abc} />
         <Route path="/" component={App} />
-        <Route path="/abc" component={Abc} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>

@@ -8,7 +8,7 @@ import { loadPosts } from '../../contexts/PostsProvider/actions';
 import { PostsContext } from '../../contexts/PostsProvider/context';
 
 export const Posts = () => {
-  const isMounted = useRef(true);
+  const isMounted = useRef(false);
 
   const postsContext = useContext(PostsContext);
   const { postsState, postsDispatch } = postsContext;
@@ -24,7 +24,7 @@ export const Posts = () => {
     });
 
     return () => {
-      isMounted.current = false;
+      isMounted.current = true;
     };
   }, [postsDispatch]);
 
