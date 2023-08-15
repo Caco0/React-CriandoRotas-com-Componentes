@@ -7,13 +7,14 @@ import { Abc } from './templates/Abc';
 import { App } from './templates/App/App';
 import { Page404 } from './templates/Page404';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Menu />
       <Switch>
+        <Route index path="/" component={App} exact />
         <Route path="/abc" component={Abc} />
-        <Route path="/" component={App} exact />
         <Route path="*" component={Page404} />
       </Switch>
     </BrowserRouter>
